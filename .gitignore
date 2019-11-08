@@ -1,3 +1,8 @@
+# Intellij
 out/
 .idea/
 *.iml
+
+# Maven
+log/
+target/
