@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="500.0" spacing="20.0" stylesheets="@../style/mails-sender.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.houarizegai.mailssender.controller.MailsSenderController">
+   <children>
+      <Label styleClass="title" text="Mails Sender" />
+      <HBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" spacing="20.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefWidth="250.0" spacing="10.0">
+               <children>
+                  <StackPane>
+                     <children>
+                        <JFXButton onAction="#onLoad" styleClass="btn" text="Load" StackPane.alignment="CENTER_RIGHT" />
+                        <Label styleClass="title-s" text="Recievers" StackPane.alignment="CENTER_LEFT" />
+                     </children>
+                  </StackPane>
+                  <TextArea fx:id="areaTo" promptText="To:" styleClass="area" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <VBox spacing="10.0">
+               <children>
+                  <HBox spacing="5.0">
+                     <children>
+                        <JFXTextField fx:id="fieldSubject" promptText="Subject" styleClass="field" HBox.hgrow="ALWAYS" />
+                        <MaterialDesignIconView fill="#2196f3" glyphName="SEND" onMouseClicked="#onSend" size="28">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </MaterialDesignIconView>
+                     </children>
+                  </HBox>
+                  <TextArea fx:id="areaContent" prefWidth="200.0" promptText="Content" styleClass="area" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

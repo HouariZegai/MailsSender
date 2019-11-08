@@ -1,0 +1,39 @@
+* {
+    -fx-font-family: Tahoma;
+}
+
+.title {
+    -fx-font-size: 22px;
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, #03b2ff 0%, #2196f3 50%);
+}
+
+.title-s {
+    -fx-font-size: 16px;
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, #03b2ff 0%, #2196f3 50%);
+}
+
+.field {
+    -fx-pref-width: 300px;
+    -fx-font-size: 15px;
+    -jfx-unfocus-color: #666;
+    -jfx-focus-color: #2196f3;
+    -fx-prompt-text-fill: #777;
+    -jfx-label-float: true
+}
+
+.area {
+    -fx-pref-width: 300px;
+    -fx-font-size: 15px;
+    -fx-prompt-text-fill: #777;
+}
+
+.btn {
+    -fx-pref-width: 80px;
+    -fx-pref-height: 30px;
+    -fx-font-size: 16px;
+    -fx-background-color: #2196f3;
+    -fx-text-fill: #FFF;
+    -fx-background-radius: 5;
+    -jfx-button-type: RAISED;
+    -fx-cursor: hand;
+}
