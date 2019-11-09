@@ -80,7 +80,22 @@ public class MailsSenderController implements Initializable {
 
     @FXML
     private void onSend() {
-        // need to make inputs validation
+        if(fieldEmail.getText() == null || !fieldEmail.getText().trim().matches(Constants.EMAIL_REGEX)) {
+            toastErrorMsg.show("Please, type a valid sender email!", 2000);
+            return;
+        }
+
+        if(fieldPassword.getText() == null || fieldPassword.getText().length() < 3) {
+            toastErrorMsg.show("Please, type a valid sender password!", 2000);
+            return;
+        }
+
+        areaTo.setText(getEmailsFromString(areaTo.getText().trim(), "\n"));
+
+        if(areaTo.getText() == null || areaTo.getText().trim().isEmpty()) {
+            toastErrorMsg.show("Please, type at least one valid receiver email!", 2000);
+            return;
+        }
 
         new MailsSenderEngine()
                 .setSenderMail(fieldEmail.getText().trim())
@@ -88,7 +103,7 @@ public class MailsSenderController implements Initializable {
                 .setMessageSubject(fieldSubject.getText().trim())
                 .setMessageContent(areaContent.getText().trim())
                 .setMessageType("text/html")
-                .setMessageRecipients(areaTo.getText().trim().split("[ ,;\n]*"))
+                .setMessageRecipients(areaTo.getText().trim().split("[\n]"))
                 .send();
     }
 

@@ -48,8 +48,8 @@
 /* Start JFXSnackbar toast */
 
 .jfx-snackbar-content {
-    -fx-background-color: #F00;
-    -fx-pref-width: 500
+    -fx-background-color: #FF3547;
+    -fx-padding: 0 10 0 10;
 }
 
 .jfx-snackbar-toast {
