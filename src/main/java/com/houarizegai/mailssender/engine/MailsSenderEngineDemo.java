@@ -1,8 +1,8 @@
 package com.houarizegai.mailssender.engine;
 
-public class SendMailsDemo {
+public class MailsSenderEngineDemo {
     public static void main(String[] args) {
-        new SendMails().setSenderMail("youremail@gmail.com")
+        new MailsSenderEngine().setSenderMail("youremail@gmail.com")
                 .setSenderPassword("yourPassword")
                 .setMessageSubject("JavaFX GUI Development Course")
                 .setMessageContent(new StringBuilder().append("<h1>JavaFX GUI Development Course Updates</h1>").append("<br />")
