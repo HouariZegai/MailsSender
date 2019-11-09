@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
 
-public class SendMails {
+public class MailsSenderEngine {
     private static String senderMail;
     private static String senderPassword;
 
@@ -18,19 +18,19 @@ public class SendMails {
     private String msgContent;
     private String msgType;
 
-    public SendMails() {
+    public MailsSenderEngine() {
         this.msgType = "text/html";
         msgRecipients = new LinkedList<>();
     }
 
     /* Start sender information */
 
-    public SendMails setSenderMail(String senderMail) {
+    public MailsSenderEngine setSenderMail(String senderMail) {
         this.senderMail = senderMail;
         return this;
     }
 
-    public SendMails setSenderPassword(String senderPassword) {
+    public MailsSenderEngine setSenderPassword(String senderPassword) {
         this.senderPassword = senderPassword;
         return this;
     }
@@ -39,27 +39,27 @@ public class SendMails {
 
     /* Start message information */
 
-    public SendMails setMessageRecipients(List<String> msgRecipients) {
+    public MailsSenderEngine setMessageRecipients(List<String> msgRecipients) {
         this.msgRecipients = msgRecipients;
         return this;
     }
 
-    public SendMails setMessageRecipients(String... msgRecipients) {
+    public MailsSenderEngine setMessageRecipients(String... msgRecipients) {
         this.msgRecipients.addAll(Arrays.asList(msgRecipients));
         return this;
     }
 
-    public SendMails setMessageSubject(String msgSubject) {
+    public MailsSenderEngine setMessageSubject(String msgSubject) {
         this.msgSubject = msgSubject;
         return this;
     }
 
-    public SendMails setMessageContent(String msgContent) {
+    public MailsSenderEngine setMessageContent(String msgContent) {
         this.msgContent = msgContent;
         return this;
     }
 
-    public SendMails setMessageType(String msgType) {
+    public MailsSenderEngine setMessageType(String msgType) {
         this.msgType = msgType;
         return this;
     }
